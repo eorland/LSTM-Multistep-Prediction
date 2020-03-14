@@ -49,7 +49,8 @@ def rescale(feature_data,test_targets,predictions, scaling_object,index):
         #repopulated is the matching target taken from the test data or predictions.
         #Ex: if the start col is 4, then we want to assign the first column of the test and pred data--
         #this is index 0, and 4-4 = 0.
-        
+     
+     
     #We now have the correct dimensions, so we can FINALLY rescale
     y_test_rescale = scaling_object.inverse_transform(flattened_features_test_copy)
     preds_rescale = scaling_object.inverse_transform(flattened_features_pred_copy)
